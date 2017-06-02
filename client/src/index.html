@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jpClientSales" ng-strict-di>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title>JP Clients &amp; Sales</title>
+    <meta name="description" content="JP clients and sales"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/application.min.css"/>
+  </head>
+  <body>
+    <div id="wrapper" class="container-fluid">
+      <!-- Header & navigation -->
+      <header>
+        <nav id="navigation">
+          <ul class="nav navbar-nav">
+            <li><a ng-href="#!/clients">All Clients</a></li>
+            <li><a ng-href="#!/sales">All Sales</a></li>
+            <li><a ng-href="#!/fault">HTTP Error</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- Main page content -->
+      <main class="col-sm-12 shadow">
+        <div class="ng-view">
+          <!-- Render templates -->
+        </div>
+      </main>
+    </div>
+    <script src="js/application.min.js"></script>
+    <script src="js/templates.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<div ng-controller="SalesByClientController as salesByClient">
+
+  <h1>Clients</h1>
+
+  <http-error ng-if="salesByClient.httpError" error="salesByClient.httpError"></http-error>
+  <client-list clients="salesByClient.clientList"></client-list>
+
+  <h2>Sales</h2>
+
+  <!-- Show sales if applicable... -->
+  <sales-list sales="salesByClient.filteredSalesList" ng-if="salesByClient.filteredSalesList.length > 0"></sales-list>
+  <!-- ...otherwise display message -->
+  <div class="message" ng-if="salesByClient.filteredSalesList.length === 0">
+    <p>No sales found for the selected client.</p>
+  </div>
+
+  <a name="list"></a>
+</div>

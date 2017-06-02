@@ -1,0 +1,5 @@
+<div ng-controller="ClientsController as clients">
+  <h1>HTTP Error Handling</h1>
+  <http-error ng-if="clients.httpError" error="clients.httpError"></http-error>
+  <button class="http-error" ng-click="clients.loadHttpError()">Request HTTP 400 Error</button>
+</div>

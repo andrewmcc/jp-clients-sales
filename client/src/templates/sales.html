@@ -1,0 +1,5 @@
+<div ng-controller="SalesController as sales">
+  <h1>Sales</h1>
+  <http-error ng-if="sales.httpError" error="sales.httpError"></http-error>
+  <sales-list sales="sales.salesList"></sales-list>
+</div>
