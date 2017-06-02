@@ -2,12 +2,16 @@ describe('ClientList Component', function () {
 
   beforeEach(module('jpClientSales'));
 
-  var element;
-  var scope;
+  let element;
+  let scope;
+  let mockParams = {
+    clientid: 1
+  }
 
-  beforeEach(inject(($rootScope, $compile) => {
+  beforeEach(inject(($rootScope, $compile, $routeParams) => {
+
     scope = $rootScope.$new();
-
+    angular.extend($routeParams, mockParams);
     scope.testClients = [{
     	"id": 1,
     	"firstname": "Elenor",
@@ -31,6 +35,11 @@ describe('ClientList Component', function () {
   it('should render a table', () => {
     let table = element.find('table').attr('id');
     expect(table).toEqual('clients');
+  });
+
+  it('should contain two rows', () => {
+    let rows = element.find('tbody').children().length;
+    expect(rows).toEqual(2);
   });
 
 });

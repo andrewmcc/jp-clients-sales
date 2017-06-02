@@ -2,8 +2,8 @@ describe('SalesList Component', () => {
 
   beforeEach(module('jpClientSales'));
 
-  var element;
-  var scope;
+  let element;
+  let scope;
 
   beforeEach(inject(($rootScope, $compile) => {
     scope = $rootScope.$new();
