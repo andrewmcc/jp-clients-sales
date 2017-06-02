@@ -2,7 +2,7 @@
 
 ## Installation
 
-To install the required dependencies open a command prompt, change directory to "server", and run the following command
+To install the required dependencies open a command prompt, change directory to "client", and run the following command
 
     $ npm install
 

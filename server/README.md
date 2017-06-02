@@ -12,7 +12,7 @@ To start the server, run
 
     $ npm start
 
-This will start the server on localhost on port 3000.
+This will start the server on http://localhost:3000
 
 ## Running Tests
 
